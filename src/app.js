@@ -1,18 +1,19 @@
-window.onload = function() {
-  let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
-  let noun = ["jogger", "racoon"];
+// import "bootstrap";
+// import "./style.css";
 
-  let domains = [];
+// import "./assets/img/rigo-baby.jpg";
+// import "./assets/img/4geeks.ico";
 
-  pronoun.forEach(element1 => {
-    adj.forEach(element2 => {
-      noun.forEach(element3 => {
-        domains.push(` ${element1}${element2}${element3}.com`);
-      });
-    });
-  });
-
-  this.console.log(domains);
-  document.getElementById("domains").innerHTML = domains;
-};
+//window.onload = function() {
+//write your code here
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
+for (let i = 0; i < pronoun.length; i++) {
+  for (let j = 0; j < adj.length; j++) {
+    for (let k = 0; k < noun.length; k++) {
+      console.log(pronoun[i] + adj[j] + noun[k] + ".com");
+    }
+  }
+}
+//}
