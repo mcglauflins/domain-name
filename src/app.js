@@ -1,28 +1,18 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-function genDomain() {
-  let domainName = [];
+window.onload = function() {
   let pronoun = ["the", "our"];
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
-  let domain = [".com", ".net"];
 
-  for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
-      for (let k = 0; k < noun.length; k++) {
-        for (let l = 0; l < domain.length; l++) {
-          domainName.push(" " + pronoun[i] + adj[j] + noun[k] + domain[l]);
-        }
-      }
-    }
-  }
+  let domains = [];
 
-  const genDomain = () => {
-    document.getElementById("domain.results").innerHTML = genDomain();
-  };
-}
-document.getElementById("myBtn").addEventListener("click".setRandomName);
+  pronoun.forEach(element1 => {
+    adj.forEach(element2 => {
+      noun.forEach(element3 => {
+        domains.push(` ${element1}${element2}${element3}.com`);
+      });
+    });
+  });
 
-setRandomName();
+  this.console.log(domains);
+  document.getElementById("domains").innerHTML = domains;
+};
